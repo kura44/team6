@@ -6,9 +6,9 @@ class Team6sController < ApplicationController
         @shindan = Shindan.new
     end
     def create
-        shindan = Shindan.new(shindan_params)
-        if shindan.save
-          redirect_to :action => "index"
+        @shindan = Shindan.new(shindan_params)
+        if @shindan.save
+          redirect_to team6_path(@shindan)
         else
           redirect_to :action => "new"
         end
@@ -29,7 +29,22 @@ class Team6sController < ApplicationController
     def type5
 
     end
-    private
+
+  def show
+
+    @shindan = Shindan.find(params[:id])
+    @j = @shindan["japanese"]
+    @m = @shindan["math"]
+    @e = @shindan["english"]
+    @sc = @shindan["science"]
+    @so = @shindan["society"]
+    @i = @shindan["interview"]
+    @g = @shindan["gd"]
+
+    @tashizan = @j + @m + @e + @sc + @so + @i + @g
+
+  end
+  private
   def shindan_params
     params.require(:shindan).permit(:japanese,:math,:english,:science,:society,:interview,:gd)
   end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'team6s/index' =>'team6s#index'
   get 'team6s/new' => 'team6s#new'
   post 'shindans' => 'team6s#create'
+  get 'team6s/:id' =>'team6s#show',as: 'team6'
   root 'team6s#index'
   get    'team6s/type1'      => 'team6s#type1'
   get    'team6s/type2'      => 'team6s#type2'
