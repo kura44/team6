@@ -14,22 +14,6 @@ class Team6sController < ApplicationController
         end
     end
 
-    def type1
-
-    end
-    def type2
-
-    end
-    def type3
-
-    end
-    def type4
-
-    end
-    def type5
-
-    end
-
   def show
 
     @shindan = Shindan.find(params[:id])
@@ -41,9 +25,41 @@ class Team6sController < ApplicationController
     @i = @shindan["interview"]
     @g = @shindan["gd"]
 
+    @sum = @j + @m + @e + @sc + @so
+    @ave = @sum / 5
+    @sum3 = (@j + @m + @e)/3
+    # 合計値
     @tashizan = @j + @m + @e + @sc + @so + @i + @g
 
+    #教科を昇順で格納
+    @subjects = [@j, @m, @e, @sc, @so] # データ配列subjects
+    @sort = @subjects.sort #配列subjectsを昇順化
+
+    #5教科のうち高得点の3教科の合計点
+    @sumTop3 =(@subjects[4]+@subjects[3]+@subjects[2])
+
+    #最大値と最小値の差(一教科特化型か否かの判断に使用)
+    @diff = @sort[4] - @sort[0]
+
   end
+
+
+  def type1
+
+  end
+  def type2
+
+  end
+  def type3
+
+  end
+  def type4
+
+  end
+  def type5
+
+  end
+
   private
   def shindan_params
     params.require(:shindan).permit(:japanese,:math,:english,:science,:society,:interview,:gd)
