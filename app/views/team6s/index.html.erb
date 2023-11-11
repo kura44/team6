@@ -1,6 +1,25 @@
 
-
-
+<br>
+<br>
+<h1>GeekTwitter</h1>
+<h3>Tweet一覧</h3>
+<%= link_to "新規投稿へ", team6s_new_path %>
+<div class="team6s-container">
+  <% @shindans.each do |t| %>
+    <div class="shindan">
+      <%= t.japanese %>
+      <%= t.math %>
+      <%= t.english %>
+      <%= t.science %>
+      <%= t.society %>
+      <%= t.interview %>
+      <%= t.gd %>
+      <%= t.created_at %>
+      <%= t.japanese %>
+    </div>
+  <% end %>
+</div>
+<%= link_to '新規', team6s_new_path %>
 <%= link_to 'type1', team6s_type1_path %>
 <%= link_to 'type2', team6s_type2_path %>
 <%= link_to 'type3', team6s_type3_path %>

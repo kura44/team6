@@ -1,0 +1,22 @@
+<h1>GeekTwitter</h1>
+<h3>新規Tweet</h3>
+<%= form_for @shindan do |f| %>
+  <div class="field">
+    <%= f.label :japanese %>
+    <%= f.text_field :japanese, :size => 140 %><br>
+    <%= f.label :math %>
+    <%= f.text_field :math, :size => 140 %><br>
+    <%= f.label :english %>
+    <%= f.text_field :english, :size => 140 %><br>
+    <%= f.label :science %>
+    <%= f.text_field :science, :size => 140 %><br>
+    <%= f.label :society %>
+    <%= f.text_field :society, :size => 140 %><br>
+    <%= f.label :interview %>
+    <%= f.text_field :interview, :size => 140 %><br>
+    <%= f.label :gd %>
+    <%= f.text_field :gd, :size => 140 %><br>
+  </div>
+  <%= f.submit "送信する" %>
+<% end %>
+<%= link_to "Topに戻る", team6s_index_path %>
