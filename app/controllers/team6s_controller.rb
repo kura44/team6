@@ -41,6 +41,18 @@ class Team6sController < ApplicationController
     #最大値と最小値の差(一教科特化型か否かの判断に使用)
     @diff = @sort[4] - @sort[0]
 
+    if @j > 50
+      redirect_to team6s_type1_path
+    elsif @j == 50
+      redirect_to team6s_type2_path
+    elsif @j > 40
+      redirect_to team6s_type3_path
+    elsif @j > 30
+      redirect_to team6s_type4_path
+    else
+      redirect_to team6s_type5_path
+    end
+
   end
 
 
