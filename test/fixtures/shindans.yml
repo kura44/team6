@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  japanese: 1
+  math: 1
+  english: 1
+  science: 1
+  society: 1
+  interview: 1
+  gd: 1
+
+two:
+  japanese: 1
+  math: 1
+  english: 1
+  science: 1
+  society: 1
+  interview: 1
+  gd: 1
