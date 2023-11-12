@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ * { font-family: "M PLUS Rounded 1c"; }
+
+
+.toumei{
+    background-color: rgba(255,255,255,0.7);
+    border: 1px solid #000;
+    text-decoration: none;
+    width: 50%;
+    margin-left: 25%;
+}
+  

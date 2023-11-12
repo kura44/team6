@@ -9,6 +9,19 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <header id="top">
+    <div class="header_content wrapper">
+      <%= image_tag "logo.png" ,class:"header_logo"%>
+      <p>合格プロファイラー</p>
+      <nav>
+        <ul>
+          <li class="current"><a href="index.html.erb">home</a></li>
+          <li><a href="#">comment</a></li>
+          <li><a href="#">出願方法</a></li>
+        </ul>
+      </nav>
+      </div>
+  </header>
 
   <body>
     <%= yield %>

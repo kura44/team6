@@ -2,46 +2,33 @@
   <head>
     <meta charset="utf-8">
     <title>診断結果</title>
-    <link rel="stylesheet" type="text/css" href="stylesheets/type1.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/type1.scss">
 <body>
-<header id="top">
-    <div class="header_content wrapper">
-    <p>アプリ名</p>
-    <nav>
-    <ul>
-        <li class="current"><a href="index.html.erb">home</a></li>
-        <li><a href="#">comment</a></li>
-        <li><a href="#">出願方法</a></li>
-    </ul>
-    </nav>
-    </div>
-</header>
+<div class="image-block">
+  <p class="toumei">あなたの結果はこれだ！
+  <br>Ⅴ型 国際バカロレア</p>
 
+</div>
 
- <section id="third-block">
-    <p class="events-title">
-      あなたの結果はこれだ！！！
-    </p>
-    <div class="event-container">
-      <div class="event">
-        <p class="event-name">
-          <span>I型</span>
-          <br>
-          <br>
-          全ての教科でバランスよく得点できています！
-        </p>
-        <image src="images/event3.jpg" class="event-image">   #六角形の写真
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <ul>
-        <li><a href="index.html.erb">home</a></li>
-        <li><a href="#">comment</a></li>
-        <li><a href="">出願方法</a></li>
-    </ul>
-    <p>アプリ名</p>
-    <p><small>&copy;2023.team6</small></p>
-  </footer>
+<div class="info-text" >
+  <p>
+  全ての教科でバランスよく得点できているあなたは、<br>
+  スーパー文理探求プログラムが向いています！<br>
+  </p>
+            国語<%= @j %>
+          数学<%= @m %>
+          英語<%= @e %>
+          理科<%= @sc %>
+          社会<%= @so %>
+          <%=  @score500 %>
+  
+  <br>
+  <%= image_tag "event5", class: "event-image" %>  
+  <br>
+  <%= link_to "過去の先輩を見てみる", :controller => "team6s", :action => "index" %>
+  <%= link_to "出願手続きマニュアル", :controller => "team6s", :action => "index" %>
+</div>
 </body>
+</html>
+
+ 
